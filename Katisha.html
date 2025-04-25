@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кибербезопасность</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pNUY0R+hcwxmicel8yzQfJ4+Y69TyYy7nPqNeV+6bEmYOaTW9K+8GXFQJzST6+qJepV1zIb8A5kMKE9A+sw3xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Feather -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header Adaptive -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-3xl font-semibold text-blue-700">Кибербезопасность</h1>
+      <nav>
+        <ul class="w-full sm:w-auto flex flex-col sm:flex-row sm:space-x-4 text-lg mt-2 sm:mt-0">
+          <li><a href="#intro" class="hover:text-blue-600 py-1 sm:py-0">Главная</a></li>
+          <li><a href="#checklists" class="hover:text-blue-600 py-1 sm:py-0">Памятка</a></li>
+          <li><a href="#news" class="hover:text-blue-600 py-1 sm:py-0">Новости</a></li>
+          <li><a href="#resources" class="hover:text-blue-600 py-1 sm:py-0">Ресурсы</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto py-8 px-4 space-y-12"  data-aos="fade-up">
+    <!-- Intro -->
+    <section id="intro" class="text-center py-8 px-4">
+      <h1 class="text-4xl font-bold mb-4">Кибербезопасность – просто о важном</h1>
+      <p class="text-xl text-gray-600">Комплекс мер для защиты данных и устройств от атак и утечек</p>
+    </section>
+    <!-- Checklist -->
+    <section id="checklists" class="max-w-7xl mx-auto">
+      <h1 class="text-3xl font-semibold mb-4 text-center"  data-aos="fade-up">Основные меры</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-sm" data-aos="fade-up">
+          <div class="flex items-center mb-2">
+            <i data-feather="lock" class="w-5 h-5 mr-2"></i>
+            <h3 class="text-xl font-semibold">Надёжные пароли</h3>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-sm">
+            <li>Длинный и уникальный пароль (12+ символов)</li>
+            <li>Менеджер паролей для генерации и хранения</li>
+            <li>Включайте многофакторную аутентификацию (MFA)</li>
+          </ul>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-sm" data-aos="fade-up">
+          <div class="flex items-center mb-2">
+            <i data-feather="mail" class="w-5 h-5 mr-2"></i>
+            <h3 class="text-xl font-semibold">Фишинг и мошенничество</h3>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-sm">
+            <li>Не кликайте на подозрительные ссылки и вложения</li>
+            <li>Проверяйте отправителя и адрес сайта вручную</li>
+            <li>Антифишинг-модули в почте и браузере</li>
+          </ul>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-sm" data-aos="fade-up">
+          <div class="flex items-center mb-2">
+            <i data-feather="users" class="w-5 h-5 mr-2"></i>
+            <h3 class="text-xl font-semibold">Социальная инженерия</h3>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-sm">
+            <li>Подтверждайте личность по официальным каналам</li>
+            <li>Не поддавайтесь давлению «срочности»</li>
+            <li>Обучайте себя новым приёмам обмана</li>
+          </ul>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-sm" data-aos="fade-up">
+          <div class="flex items-center mb-2">
+            <i data-feather="cpu" class="w-5 h-5 mr-2"></i>
+            <h3 class="text-xl font-semibold">Безопасность устройств</h3>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-sm">
+            <li>Автообновления ОС и приложений</li>
+            <li>Установите антивирус и включите фаервол</li>
+            <li>Только защищённые Wi-Fi или VPN</li>
+          </ul>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-sm" data-aos="fade-up">
+          <div class="flex items-center mb-2">
+            <i data-feather="globe" class="w-5 h-5 mr-2"></i>
+            <h3 class="text-xl font-semibold">Социальные сети</h3>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-sm">
+            <li>Закрывайте профиль и отключайте геометки</li>
+            <li>Публикуйте минимум личных данных</li>
+            <li>Регулярно чистите список друзей</li>
+          </ul>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-sm" data-aos="fade-up">
+          <div class="flex items-center mb-2">
+            <i data-feather="book" class="w-5 h-5 mr-2"></i>
+            <h3 class="text-xl font-semibold">Реагирование на инциденты</h3>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-sm">
+            <li>Сообщайте об угрозах в службу поддержки</li>
+            <li>Фиксируйте дату, время и суть инцидента в отчёте</li>
+            <li>Следуйте инструкциям службы поддержки</li>
+          </ul>
+        </div>
+      </div>
+    <!-- News -->
+    </section>
+    <section id="news" class="py-8 px-4" data-aos="fade-up">
+      <h1 class="text-3xl font-semibold mb-6 text-center">Новости кибербезопасности</h1>
+      <div id="news-container" class="space-y-4">
+        <!-- Automatic -->
+      </div>
+    </section>
+    <!-- Resources Section -->
+    <h1 class="text-3xl font-semibold mb-6 text-center" data-aos="fade-up">Полезные ресурсы</h1>
+    <section id="resources" class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-sm" data-aos="fade-up">
+          <div class="flex items-center mb-2">
+            <i data-feather="bookmark" class="w-5 h-5 mr-2"></i>
+            <h3 class="text-xl font-semibold"><a href="https://fstec.ru/" target="_blank" class="text-blue-700 hover:underline">ФСТЭК России</a></h3>
+          </div>
+          <p class="text-sm mb-2">Государственный орган, отвечающий за техническую защиту информации и сертификацию средств защиты</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-sm" data-aos="fade-up">
+          <div class="flex items-center mb-2">
+            <i data-feather="bookmark" class="w-5 h-5 mr-2"></i>
+            <h3 class="text-xl font-semibold"><a href="https://digital.gov.ru/activity/kiberbezopasnost" target="_blank" class="text-blue-700 hover:underline">Минцифры: Кибербезопасность</a></h3>
+          </div>
+          <p class="text-sm mb-2">Портал Национальной программы «Цифровая экономика» с новостями, статистикой и нормативными документами по информационной безопасности</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-sm" data-aos="fade-up">
+          <div class="flex items-center mb-2">
+            <i data-feather="bookmark" class="w-5 h-5 mr-2"></i>
+            <h3 class="text-xl font-semibold"><a href="https://digital.gov.ru/activity/kiberbezopasnost/programma-kibergigieny-2" target="_blank" class="text-blue-700 hover:underline">Минцифры: Кибергигиена</a></h3>
+          </div>
+          <p class="text-sm mb-2">Официальный курс и материал для граждан по созданию надёжных паролей, защите личных данных и противодействию телефонному фишингу</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-sm" data-aos="fade-up">
+          <div class="flex items-center mb-2">
+            <i data-feather="bookmark" class="w-5 h-5 mr-2"></i>
+            <h3 class="text-xl font-semibold"><a href="https://www.kaspersky.ru/resource-center" target="_blank" class="text-blue-700 hover:underline">Kaspersky Resource Center</a></h3>
+          </div>
+          <p class="text-sm mb-2">Обширная библиотека статей «Лаборатории Касперского» об интернет-угрозах, методах защиты и разборах инцидентов</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-sm" data-aos="fade-up">
+          <div class="flex items-center mb-2">
+            <i data-feather="bookmark" class="w-5 h-5 mr-2"></i>
+            <h3 class="text-xl font-semibold"><a href="https://www.kaspersky.ru/resource-center/definitions/what-is-cyber-security" target="_blank" class="text-blue-700 hover:underline">Kaspersky Cybersecurity</a></h3>
+          </div>
+          <p class="text-sm mb-2">Краткая энциклопедическая статья о базовых понятиях, категориях и практиках киберзащиты</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-sm" data-aos="fade-up">
+          <div class="flex items-center mb-2">
+            <i data-feather="bookmark" class="w-5 h-5 mr-2"></i>
+            <h3 class="text-xl font-semibold"><a href="https://owasp.org/www-project-top-ten/" target="_blank" class="text-blue-700 hover:underline">OWASP</a></h3>
+          </div>
+          <p class="text-sm mb-2">Международный стандарт-справочник по десяти критическим рискам веб-приложений, обязательный для разработчиков и тестировщиков</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-white mt-8 py-4 shadow-inner text-center text-sm px-2">
+    © 2025 Кибербезопасность | Сделано с ❤️
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>feather.replace(); AOS.init({ once: true });</script>
+  <script>
+    async function loadNews() {
+      const newsContainer = document.getElementById('news-container');
+      newsContainer.innerHTML = '';
+      try {
+        const response = await fetch('https://newsdata.io/api/1/latest?apikey=pub_815451f7746ba1a30827a20854a8dbfed2a4b&qinTitle="Кибербезопасность"&language=ru&country=ru');
+        const data = await response.json();
+        if (data.status === 'success') {
+          const articles = data.results.slice(0, 5);
+          articles.forEach(article => {
+            const post = document.createElement('article');
+            post.className = 'bg-white shadow-md rounded-lg p-6 hover:shadow-sm max-w-7xl mx-auto';
+            post.innerHTML = `
+              <h1 class="text-xl font-semibold mb-2">${article.title}</h1>
+              <p class="text-sm mb-2">${new Date(article.pubDate).toLocaleDateString()}</p>
+              <p class="text-lg mb-2">${article.description || ''}</p>
+              <a href="${article.link}" target="_blank" class="text-blue-700 hover:underline">Читать далее...</a>
+            `;
+            newsContainer.appendChild(post);
+          });
+        } else {
+          newsContainer.className = 'bg-white shadow-md rounded-lg p-6 hover:shadow-sm max-w-7xl mx-auto';
+          newsContainer.innerHTML = '<h1 class="text-xl font-semibold mb-2 text-red-500">Не удалось загрузить новости</p>';
+        }
+      } catch (error) {
+        newsContainer.className = 'bg-white shadow-md rounded-lg p-6 hover:shadow-sm max-w-7xl mx-auto';
+        newsContainer.innerHTML = '<h1 class="text-xl font-semibold mb-2 text-red-500">Ошибка загрузки новостей</p>';
+        console.error('Ошибка загрузки новостей:', error);
+      }
+    }
+    window.addEventListener('DOMContentLoaded', loadNews);
+  </script>
+</body>
+</html>
