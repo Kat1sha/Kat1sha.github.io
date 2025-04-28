@@ -6,8 +6,6 @@
   <title>Кибербезопасность</title>
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pNUY0R+hcwxmicel8yzQfJ4+Y69TyYy7nPqNeV+6bEmYOaTW9K+8GXFQJzST6+qJepV1zIb8A5kMKE9A+sw3xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Feather -->
@@ -17,18 +15,22 @@
   <!-- Header Adaptive -->
   <header class="bg-white shadow-md">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-3xl font-semibold text-blue-700">Кибербезопасность</h1>
-      <nav>
-        <ul class="w-full sm:w-auto flex flex-col sm:flex-row sm:space-x-4 text-lg mt-2 sm:mt-0">
-          <li><a href="#intro" class="hover:text-blue-600 py-1 sm:py-0">Главная</a></li>
-          <li><a href="#checklists" class="hover:text-blue-600 py-1 sm:py-0">Памятка</a></li>
-          <li><a href="#news" class="hover:text-blue-600 py-1 sm:py-0">Новости</a></li>
-          <li><a href="#resources" class="hover:text-blue-600 py-1 sm:py-0">Ресурсы</a></li>
-        </ul>
-      </nav>
+      <h1 class="text-2xl font-semibold text-blue-700 lg:text-3xl">Кибербезопасность</h1>
+      <div class="items-right">
+        <!-- Burger Menu -->
+        <button id="menu-toggle" class="lg:hidden text-blue-700 mr-12 mt-2"><i data-feather="menu" class="w-8 h-8"></i></button>
+        <!-- Navigation -->
+        <nav id="menu" class="hidden lg:flex flex-col lg:flex-row text-lg mt-2">
+          <ul class="lg:flex lg:space-x-4">
+            <li><a href="#intro" class="hover:text-blue-700 py-1 lg:py-0">Главная</a></li>
+            <li><a href="#checklists" class="hover:text-blue-700 py-1 lg:py-0">Памятка</a></li>
+            <li><a href="#news" class="hover:text-blue-700 py-1 lg:py-0">Новости</a></li>
+            <li><a href="#resources" class="hover:text-blue-700 py-1 lg:py-0">Ресурсы</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
-
   <main class="container mx-auto py-8 px-4 space-y-12"  data-aos="fade-up">
     <!-- Intro -->
     <section id="intro" class="text-center py-8 px-4">
@@ -168,6 +170,14 @@
   </footer>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>feather.replace(); AOS.init({ once: true });</script>
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
   <script>
     async function loadNews() {
       const newsContainer = document.getElementById('news-container');
