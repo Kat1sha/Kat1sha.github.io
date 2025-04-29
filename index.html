@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кибербезопасность</title>
+  <link rel="icon" href="icon.ico">
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <!-- AOS -->
@@ -13,25 +14,27 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
   <!-- Header Adaptive -->
-  <header class="bg-white shadow-md">
+  <header id="header" class="fixed top-0 left-0 w-full bg-white shadow-md transition-shadow z-50">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-semibold text-blue-700 lg:text-3xl">Кибербезопасность</h1>
       <div class="items-right">
         <!-- Burger Menu -->
-        <button id="menu-toggle" class="lg:hidden text-blue-700 mr-12 mt-2"><i data-feather="menu" class="w-8 h-8"></i></button>
+        <button id="menu-toggle" class="lg:hidden text-blue-700 mr-4 mt-2">
+          <i data-feather="menu" class="w-8 h-8"></i>
+        </button>
         <!-- Navigation -->
-        <nav id="menu" class="hidden lg:flex flex-col lg:flex-row text-lg mt-2">
+        <nav id="menu" class="hidden opacity-0 transform scale-95 transition-all duration-300 ease-out lg:flex flex-col lg:flex-row text-lg mt-2 bg-white absolute right-4 top-16 p-4 rounded-md shadow-md lg:static lg:bg-transparent lg:shadow-none lg:opacity-100 lg:scale-100">
           <ul class="lg:flex lg:space-x-4">
-            <li><a href="#intro" class="hover:text-blue-700 py-1 lg:py-0">Главная</a></li>
-            <li><a href="#checklists" class="hover:text-blue-700 py-1 lg:py-0">Памятка</a></li>
-            <li><a href="#news" class="hover:text-blue-700 py-1 lg:py-0">Новости</a></li>
-            <li><a href="#resources" class="hover:text-blue-700 py-1 lg:py-0">Ресурсы</a></li>
+            <li><a href="#intro" class="block hover:text-blue-700 py-1 lg:py-0">Главная</a></li>
+            <li><a href="#checklists" class=" block hover:text-blue-700 py-1 lg:py-0">Памятка</a></li>
+            <li><a href="#news" class="block hover:text-blue-700 py-1 lg:py-0">Новости</a></li>
+            <li><a href="#resources" class="block hover:text-blue-700 py-1 lg:py-0">Ресурсы</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-  <main class="container mx-auto py-8 px-4 space-y-12"  data-aos="fade-up">
+  <main class="pt-32 container mx-auto py-8 px-4 space-y-12">
     <!-- Intro -->
     <section id="intro" class="text-center py-8 px-4">
       <h1 class="text-4xl font-bold mb-4">Кибербезопасность – просто о важном</h1>
@@ -165,17 +168,43 @@
       </div>
     </section>
   </main>
-  <footer class="bg-white mt-8 py-4 shadow-inner text-center text-sm px-2">
-    © 2025 Кибербезопасность | Сделано с ❤️
+  <footer class="bg-white mt-8 py-6 px-4 border-t shadow-inner text-center text-sm text-gray-700">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <p>© 2025 Кибербезопасность | Сделано с ❤️</p>
+      <p><a href="https://github.com/Kat1sha/Kat1sha.github.io" target="_blank" class="text-blue-700 hover:underline flex items-center gap-1"><i data-feather="github" class="w-5 h-5 mr-2"></i>Исходный код на GitHub</a></p>
+    </div>
   </footer>
+  
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>feather.replace(); AOS.init({ once: true });</script>
+  <!-- Burger Script -->
   <script>
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
-
+    const header = document.getElementById('header');
+  
     toggle.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        setTimeout(() => {
+          menu.classList.remove('opacity-0', 'scale-95');
+          menu.classList.add('opacity-100', 'scale-100');
+        }, 10);
+      } else {
+        menu.classList.remove('opacity-100', 'scale-100');
+        menu.classList.add('opacity-0', 'scale-95');
+        setTimeout(() => {
+          menu.classList.add('hidden');
+        }, 300);
+      }
+    });
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('shadow-lg');
+      } else {
+        header.classList.remove('shadow-lg');
+      }
     });
   </script>
   <script>
